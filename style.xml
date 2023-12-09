@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CheckBox" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorControlNormal">@color/grisF</item>
+    </style>
+</resources>
