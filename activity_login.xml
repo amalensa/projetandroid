@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/tastymix"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome To TastyMix"
+            android:textColor="@color/pink"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/login"
+            android:text=" login to your account"
+            android:alpha="0.7"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Champ Email -->
+        <EditText
+            android:id="@+id/gmail_or_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_input"
+            android:drawablePadding="10dp"
+            android:hint="Your gmail or username..."
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/grisF"
+            android:textColorHint="@color/gris" />
+
+        <!-- Champ Mot de passe -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_input"
+            android:hint="Your Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/grisF"
+            android:textColorHint="@color/gris" />
+
+
+
+        <!-- Espacement entre les champs et le bouton Login -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="60dp" />
+
+        <!-- Bouton Login -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Log in"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#80FF0000"
+            android:strokeColor="#FFFFFF"
+            app:cornerRadius="100dp"/>
+
+        <!-- Espacement entre le bouton Login et les champs "Don't have an account?" -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="26dp" />
+
+        <!-- TextView "Don't have an account?" -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/having_account"
+                android:text="don't have an account?"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/signUpTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/having_account"
+                android:clickable="true"
+                android:onClick="openSignUpActivity"
+                android:text="create one"
+                android:textColor="@color/pink"
+                tools:ignore="TouchTargetSizeCheck" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>
